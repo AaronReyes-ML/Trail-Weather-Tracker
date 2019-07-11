@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: DarkSlateGrey;
+  color: DarkSlateGrey;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10pt;
+}
+#main {
+  margin: 0;
+  padding: 0 20px 20px;
+}
+a {
+  background: Transparent;
+  color: DarkSlateGrey;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h1 {
+  color: gray;
+  font-size: 150%;
+  font-style: italic;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid DarkSlateGrey;
+}
+.title {
+  margin: 0 0 1em;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  border-bottom: 4px DarkSlateGrey;
+  font-size: 2em;
+  font-style: normal;
+}
+
+#notice #warning {
+  background: black;
+  margin: 1em 0;
+  padding: 4px;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.sample_04{
+border-collapse: collapse;
+border: 1px solid #999;
+}
+
+.sample_04 th{
+font-style: italic;
+width: 25%;
+text-align: left;
+vertical-align: top;
+color: #fff;
+background-color: #555;
+border-top: 1px solid #fff;
+}
+.sample_04 td{
+background-color: #fff;
+border-bottom: 1px solid #999;
+vertical-align: top;
+}
+.table-wrapper {
+  position:relative;
+}
+.table-scroll-all {
+  height:382px;
+  overflow:auto;
+}
+.table-scroll-search {
+  height:145px;
+  overflow:auto;  
+}
+.table-wrapper table {
+  width:100%;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

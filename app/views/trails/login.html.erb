@@ -1,0 +1,50 @@
+<h1>New Trail</h1>
+
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '118495718699021',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+    
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+    
+    <div id="fb-root"></div>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=118495718699021";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    function login(){
+      FB.login(function(response){
+        if(response.status == 'connected'){
+        document.getElementById('status').innerHTML = 'Welcome! Login successful';
+      } else if (response.status == 'not_authorized'){
+        document.getElementById('status').innerHTML = 'Not logged in.';
+      } else {
+        document.getElementById('status').innerHTML = 'Facebook login failed.';
+      }
+      })
+    }
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+
+

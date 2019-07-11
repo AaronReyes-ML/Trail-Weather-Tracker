@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Trail Weather Tracker(0.4.2.)
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    %h1.title <center><href><a href=/trails>Trail Weather Tracker Ver 0.4.2</a></center>
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+
+      = yield
